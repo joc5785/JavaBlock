@@ -12,3 +12,11 @@ public class JavaBlockApplication {
         SpringApplication.run(JavaBlockApplication.class, args);
     }
 }
+
+//TODO
+//Block validation on index?
+//Transaction validation by public key?
+//Gossip protocol
+    //Scale Cube
+    //Apache?
+
