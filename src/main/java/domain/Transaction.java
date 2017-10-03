@@ -1,19 +1,22 @@
 package domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * Created by o'connell on 9/29/17.
  */
+
+@Entity
 public class Transaction {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String txid;
     private String dataIn;
     private String dataOut;
-
-    public Transaction(String txid, String dataIn, String dataOut) {
-        this.txid = txid;
-        this.dataIn = dataIn;
-        this.dataOut = dataOut;
-    }
 
     public String getTxid() {
         return txid;

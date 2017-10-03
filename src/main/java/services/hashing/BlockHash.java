@@ -1,4 +1,4 @@
-package services;
+package services.hashing;
 
 import javax.xml.bind.DatatypeConverter;
 import java.security.MessageDigest;

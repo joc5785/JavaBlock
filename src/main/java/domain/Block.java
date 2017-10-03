@@ -1,5 +1,9 @@
 package domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -7,26 +11,19 @@ import java.util.List;
 /**
  * Created by o'connell on 9/29/17.
  */
+
+@Entity
 public class Block {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long blockIndex;
+
     private String previousBlockHash;
     private String BlockHash;
     private String timeStamp;
     private String data;
 //  private ArrayList<String> txData;
-
-
-    public Block(long blockIndex, String previousBlockHash, String blockHash, String timeStamp, String data) {
-        super();
-        this.blockIndex = blockIndex;
-        this.previousBlockHash = previousBlockHash;
-        BlockHash = blockHash;
-        this.timeStamp = timeStamp;
-        this.data = data;
-//        this.txData = txData;
-    }
-
 
     public long getBlockIndex() {
         return blockIndex;
@@ -58,14 +55,6 @@ public class Block {
     public void setData(String data) {
         this.data = data;
     }
-
-
-    //public List<String> getTxData() {
-//        return txData;
-//      }
-//    public void setTxData(ArrayList<String> txData) {
-//        this.txData = txData;
-//    }
 
 
 }
